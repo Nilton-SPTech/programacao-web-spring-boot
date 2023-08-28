@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8a15467-2fa9-43de-a177-74566e427f6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../aula01/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/src/main/java/school/sptech/projeto01/FraseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/src/main/java/school/sptech/projeto01/Projeto01Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula01/src/test/java/school/sptech/projeto01/Projeto01ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02-nivelamento/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/Aula02NivelamentoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/CalculadoraController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/FraseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/Heroi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/HeroiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/java/school/sptech/aula02nivelamento/PokemonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/src/test/java/school/sptech/aula02nivelamento/Aula02NivelamentoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/Aula02NivelamentoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/CalculadoraController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/FraseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/Heroi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/HeroiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula02/target/classes/school/sptech/aula02nivelamento/PokemonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/school/sptech/aula03/Aula03Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/school/sptech/aula03/controller/MusicaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/school/sptech/aula03/entity/Musica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/school/sptech/aula03/Aula03ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/src/main/java/org/example/ControleBonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/src/main/java/org/example/Coordenador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/src/main/java/org/example/IBonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fixacao-implements/src/main/java/org/example/Professor.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2UJCQRebamyU9alG0P9ruSpztDR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NiltonGabrielRamosGo/Nilton/SPTech/Terceiro_Semestre/programacao-web-spring-boot/aula03&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a9136320be4922bbfba95ca587515fec&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="school.sptech.aula03" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Aula03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="aula03" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="school.sptech.aula03.Aula03Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8a15467-2fa9-43de-a177-74566e427f6d" name="Changes" comment="" />
+      <created>1692648284755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692648284755</updated>
+      <workItem from="1692648285691" duration="75000" />
+      <workItem from="1692649297261" duration="2845000" />
+      <workItem from="1692652520178" duration="4104000" />
+      <workItem from="1692748390480" duration="66000" />
+      <workItem from="1693229676712" duration="667000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
