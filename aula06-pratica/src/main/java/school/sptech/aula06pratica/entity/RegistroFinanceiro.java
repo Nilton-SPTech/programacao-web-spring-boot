@@ -1,11 +1,18 @@
 package school.sptech.aula06pratica.entity;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
-public class RegistroFinanceiro {
-    private String descricao;
-        private Double valor;
 
+@Entity
+public class RegistroFinanceiro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String descricao;
+    private Double valor;
     private LocalDate data;
 
     public String getDescricao() {
@@ -30,5 +37,13 @@ public class RegistroFinanceiro {
 
     public void setData(LocalDate data) {
         this.data = data;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

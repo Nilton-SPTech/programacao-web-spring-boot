@@ -1,17 +1,24 @@
 package school.sptech.aula06pratica.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.aula06pratica.entity.RegistroFinanceiro;
+import school.sptech.aula06pratica.repository.RegistroFinanceiroRepository;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/registros")
 public class RegistroFinanceiroController {
-    private List<RegistroFinanceiro> listRegistro = new ArrayList<>();
+
+    @Autowired
+    private RegistroFinanceiroRepository repository;
+    //private List<RegistroFinanceiro> listRegistro = new ArrayList<>();
 
     @PostMapping
     public ResponseEntity<RegistroFinanceiro> cadastrarRegistro(@RequestBody RegistroFinanceiro dados) {
@@ -24,91 +31,103 @@ public class RegistroFinanceiroController {
             return ResponseEntity.status(400).build();
         }
 
-        listRegistro.add(dados);
-        return ResponseEntity.status(201).body(dados);
+        //INSERE AUTOMATICAMENTE NO BANCO E RETORNA O OBJETO QUE FOI INSERIDO (junto com o ID)
+        RegistroFinanceiro registroSalvo = this.repository.save(dados);
+
+        return ResponseEntity.status(201)
+                .body(registroSalvo);
     }
 
     @GetMapping
     public ResponseEntity<List<RegistroFinanceiro>> listarRegistros() {
 
-        if (listRegistro.size() == 0) {
+        List<RegistroFinanceiro> registros = this.repository.findAll();
+
+        if(registros.isEmpty()){
             return ResponseEntity.status(204).build();
         }
 
-        return ResponseEntity.status(200).body(listRegistro);
+        return ResponseEntity.status(200).body(registros);
     }
 
-    @GetMapping("/{indice}")
-    public ResponseEntity<RegistroFinanceiro> buscarRegistro(@PathVariable int indice) {
+    @GetMapping("/{id}")
+    public ResponseEntity<RegistroFinanceiro> buscarRegistro(@PathVariable int id) {
 
-        if (indice < 0 || indice > listRegistro.size()) {
+        Optional<RegistroFinanceiro> registroOpt = this.repository.findById(id);
+
+        if(registroOpt.isEmpty()){
             return ResponseEntity.status(404).build();
         }
 
-        return ResponseEntity.status(200).body(listRegistro.get(indice));
+        return ResponseEntity.status(200)
+                .body(registroOpt.get());
     }
 
-    @PutMapping("/{indice}")
-    public ResponseEntity<RegistroFinanceiro> atualizarRegistro(@PathVariable int indice, @RequestBody RegistroFinanceiro dados) {
+    @PutMapping("/{id}")
+    public ResponseEntity<RegistroFinanceiro> atualizarRegistro(@PathVariable int id, @RequestBody RegistroFinanceiro dados) {
 
-        if (indice < 0 || indice > listRegistro.size()) {
-            return ResponseEntity.status(404).build();
+        dados.setId(id);
+
+        //VALIDA SE O ID EXISTE
+        if(this.repository.existsById(id)){
+
+        //SAVE TEM 2 COMPORTAMENTOS
+        // - Se o objeto NÃO POSSUI ID ele faz INSERT
+        // - Se o objeto POSSUI ID ele faz UPDATE
+            RegistroFinanceiro registroAtualizado = this.repository.save(dados);
+
+            return ResponseEntity.status(200).body(dados);
         }
 
-        if (dados.getDescricao().isEmpty() || dados.getDescricao() == null) {
-            return ResponseEntity.status(400).build();
-        }
-
-        if(dados.getValor().equals(0.0)){
-            return ResponseEntity.status(400).build();
-        }
-
-        listRegistro.set(indice, dados);
-        return ResponseEntity.status(200).body(dados);
+        return ResponseEntity.status(404).build();
     }
 
-    @DeleteMapping("/{indice}")
-    public ResponseEntity<Void> deletarRegistro(@PathVariable int indice) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarRegistro(@PathVariable int id) {
 
-        if (indice < 0 || indice > listRegistro.size()) {
-            return ResponseEntity.status(404).build();
+        if(this.repository.existsById(id)){
+            this.repository.deleteById(id);
+            return ResponseEntity.status(204).build();
         }
 
-        listRegistro.remove(indice);
-        return ResponseEntity.status(200).build();
+        return ResponseEntity.status(404).build();
     }
 
     @GetMapping("/ganhos")
-    public ResponseEntity<List<RegistroFinanceiro>> listarGanhos(){
-        if(listRegistro.size() == 0){
+    public ResponseEntity<List<RegistroFinanceiro>> listarGanhos() {
+
+        List<RegistroFinanceiro> listRegistro = this.repository.findAll();
+
+        List<RegistroFinanceiro> listGanhos = listRegistro.stream()
+                .filter(registro -> registro.getValor() > 0)
+                .toList();
+
+        if (listGanhos.isEmpty()) {
             return ResponseEntity.status(204).build();
+        } else {
+            return ResponseEntity.status(200)
+                    .body(listGanhos);
         }
-
-        List<RegistroFinanceiro> listGanhos = new ArrayList<>();
-
-        for (RegistroFinanceiro r: listRegistro) {
-            if(r.getValor() > 0.0){
-                listGanhos.add(r);
-            }
-        }
-
-        return ResponseEntity.status(200).body(listGanhos);
     }
 
     @GetMapping("/despesas")
-    public ResponseEntity<List<RegistroFinanceiro>> listarDespesas(){
-        if(listRegistro.isEmpty()){
+    public ResponseEntity<List<RegistroFinanceiro>> listarDespesas() {
+
+        List<RegistroFinanceiro> listRegistro = this.repository.findAll();
+
+        if (listRegistro.isEmpty()) {
             return ResponseEntity.status(204).build();
         }
 
         List<RegistroFinanceiro> listDespesas = new ArrayList<>();
 
-        for (RegistroFinanceiro r: listRegistro) {
-            if(r.getValor() < 0.0){
+        for (RegistroFinanceiro r : listRegistro) {
+            if (r.getValor() < 0.0) {
                 listDespesas.add(r);
             }
         }
 
-        return ResponseEntity.status(200).body(listDespesas);
+        return ResponseEntity.status(200)
+                .body(listDespesas);
     }
 }
