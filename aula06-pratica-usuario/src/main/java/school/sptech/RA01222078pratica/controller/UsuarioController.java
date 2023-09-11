@@ -17,7 +17,7 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<Usuario> cadastrarUsuario(@RequestBody Usuario dados) {
         if (dados.getEmail() == null || dados.getEmail().length() < 10 || !dados.getEmail().contains("@")) {
-            return ResponseEntity.status(400).build();
+            return ResponseEntity.status(404).build();
         }
 
         for (Usuario u : listUsuario) {
@@ -60,7 +60,7 @@ public class UsuarioController {
     @PutMapping("/{indice}")
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable int indice, @RequestBody Usuario dados){
         if (indice > listUsuario.size()) {
-            return ResponseEntity.status(400).build();
+            return ResponseEntity.status(404).build();
         }
 
         if (dados.getEmail() == null || dados.getEmail().length() < 10 || !dados.getEmail().contains("@")) {
@@ -69,7 +69,9 @@ public class UsuarioController {
 
         for (Usuario u : listUsuario) {
             if (u.getEmail().equals(dados.getEmail())) {
-                return ResponseEntity.status(409).build();
+                if(u.getId() != dados.getId()){
+                    return ResponseEntity.status(409).build();
+                }
             }
         }
 
@@ -82,7 +84,7 @@ public class UsuarioController {
     @DeleteMapping("/{indice}")
     public ResponseEntity<Void> deletarUsuario(@PathVariable int indice){
         if (indice > listUsuario.size()) {
-            return ResponseEntity.status(400).build();
+            return ResponseEntity.status(404).build();
         }
 
         listUsuario.remove(indice);
