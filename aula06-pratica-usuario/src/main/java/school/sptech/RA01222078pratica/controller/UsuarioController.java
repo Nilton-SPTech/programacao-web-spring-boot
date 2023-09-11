@@ -13,6 +13,7 @@ import java.util.List;
 public class UsuarioController {
 
     private List<Usuario> listUsuario = new ArrayList<Usuario>();
+    int incrementId = 0;
 
     @PostMapping
     public ResponseEntity<Usuario> cadastrarUsuario(@RequestBody Usuario dados) {
@@ -26,13 +27,8 @@ public class UsuarioController {
             }
         }
 
-        if (listUsuario.size() > 0) {
-            int posicao = listUsuario.size();
+        dados.setId(incrementId++);
 
-            dados.setId(listUsuario.get(posicao - 1).getId() + 1);
-        } else {
-            dados.setId(1);
-        }
 
         listUsuario.add(dados);
         return ResponseEntity.status(201).body(dados);
