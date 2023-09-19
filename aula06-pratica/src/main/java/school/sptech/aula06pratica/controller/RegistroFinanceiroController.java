@@ -114,7 +114,11 @@ public class RegistroFinanceiroController {
     public ResponseEntity<List<RegistroFinanceiro>> listarDespesas() {
 
         List<RegistroFinanceiro> listRegistro = this.repository.findAll();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3219266d7d435943309fb4a5d82a21049ce35ab6
         if (listRegistro.isEmpty()) {
             return ResponseEntity.status(204).build();
         }
